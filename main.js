@@ -1,6 +1,6 @@
 const button = document.getElementById("miBoton");
 
-button.addEventListener("mouseover", function() {
+button.addEventListener("click", function() {
     alert("BIEN MAGO!!!");
 });
 

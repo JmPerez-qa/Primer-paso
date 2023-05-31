@@ -10,7 +10,7 @@ h2{
     text-align: center;
     color: darkgreen;
 }
-.pregunta{
+.container{
     text-align: center;
 }
 
@@ -122,4 +122,11 @@ header #lista{
   
   
     }
+  }
+  .imagenes{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;    
   }
