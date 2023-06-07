@@ -1,8 +1,8 @@
 const button = document.getElementById("miBoton");
 
-button.addEventListener("click", function() {
-    alert("BIEN MAGO!!!");
-});
+//button.addEventListener("click", function() {
+ //   alert("BIEN MAGO!!!");
+//});
 
 const form = document.getElementById('myForm');
 form.addEventListener('submit', function(event) {
@@ -11,19 +11,29 @@ form.addEventListener('submit', function(event) {
 });
 
 function validateEmail(email) {
-    const regex =  /^[^\s@]+@[^\s@]+\.[^\s@]{2,7}$/
-    return regex.test(email)
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,7}$/;
+  return regex.test(email);
+}
+
+function validateForm() {
+  const emailInput = document.getElementById('email');
+  const email = emailInput.value;
+  if (!validateEmail(email)) {
+    alert('Por favor ingrese un correo electrónico válido.');
+  } else {
+    alert('Correo electrónico enviado correctamente.');
   }
-  function validateForm() {
-    const emailInput = document.getElementById('email');
-    const email = emailInput.value;
-    if (!validateEmail(email)) {
-      alert('Por favor ingrese un correo electrónico válido.');
-    } else {
-      alert('Correo electrónico enviado correctamente.');
-    }
-  }
-  document.querySelector("button.button-menu-toggle")
-    .addEventListener("click", function() {
-           document.querySelector(".nav-links").
-                      classList.toggle("nav-links-responsive")});
+}
+
+document.querySelector("button.button-menu-toggle").addEventListener("click", function() {
+  document.querySelector(".nav-links").classList.toggle("nav-links-responsive");
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const saludoButton = document.querySelector(".saludo-button");
+  saludoButton.addEventListener("click", showAlert);
+});
+
+function showAlert() {
+  alert("Gracias por venir");
+}
